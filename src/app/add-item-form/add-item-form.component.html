@@ -1,26 +1,21 @@
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
-  <div class="field is-horizontal">
-    <div class="field-body">
-
-      <div class="field is-narrow">
-        <p class="control">
-          <input type="number" required name="amount" style="width: 100px;" class="input" placeholder="Amount" [ngModel]="item.amount">
-        </p>
+  <div class="row">
+    <div class="col-sm">
+      <input type="number" required name="amount" style="width: 100px;" class="input form-control" style="width: 120px; height: 40px;" placeholder="Amount" [ngModel]="item.amount">  
+    </div>
+    <div class="col-sm">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+        </div>
+        <input type="text" required name="description" class="input form-control" style="width: 400px; height: 40px;" placeholder="text" [ngModel]="item.description" aria-label="Default" aria-describedby="inputGroup-sizing-default">
       </div>
-
-      <div class="field">
-        <p class="control">
-          <input type="text" required name="description" class="input" placeholder="Description" [ngModel]="item.description">
-        </p>
-      </div>
-
-      <div class="field is-narrow">
-        <button type="submit" class="button" [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }" [disabled]="!itemForm.valid">
-          <p *ngIf="isNewItem">Add</p>
-          <p *ngIf="!isNewItem">Save</p>
-        </button>
-      </div>
-      
+    </div>
+    <div class="col-sm">
+      <button type="submit" class="button btn btn-primary" style="height: 40px; width: 100px;" [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }" [disabled]="!itemForm.valid">
+      <p *ngIf="isNewItem">Add</p>
+      <p *ngIf="!isNewItem">Save</p>
+      </button>
     </div>
   </div>
 </form>
