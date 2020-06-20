@@ -12,13 +12,13 @@
       </div>
     </div>
     <div class="col-sm">
+      <input type="date" required name="date" class="input form-control" style="width: 140px; height: 40px;" placeholder="date" [ngModel]="item.date" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="col-sm">
       <button type="submit" class="button btn btn-primary" style="height: 40px; width: 100px;" [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }" [disabled]="!itemForm.valid">
       <p *ngIf="isNewItem">Add</p>
       <p *ngIf="!isNewItem">Save</p>
       </button>
-    </div>
-    <div class="col-sm">
-      <input type="date" required name="date" class="input form-control" style="width: 400px; height: 40px;" placeholder="date" [ngModel]="item.date" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
   </div>
 </form>

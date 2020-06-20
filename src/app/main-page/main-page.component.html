@@ -16,13 +16,21 @@
         </div>
       </section>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)" (update)="updateItem($event)"></app-budget-item-list>
+    
     </div>
   </div>
+  <div class="row">
+    <div class="col-8">
+      <app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)" (update)="updateItem($event)"></app-budget-item-list>
+    </div>
+    <div class="col-4">
+      <div style="display: block; width: 520px">
+        <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"></canvas>
+      </div>
+  </div>
 </div>
-
 <hr style="margin-top: 0">
 </div>

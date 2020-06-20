@@ -11,6 +11,8 @@ import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.compon
 import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/budget-item-card.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { MatDialogModule } from '@angular/material/dialog';
     AddItemFormComponent,
     BudgetItemListComponent,
     BudgetItemCardComponent,
-    EditItemModalComponent
+    EditItemModalComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ChartsModule
   ],
   providers: [],
   entryComponents: [EditItemModalComponent],
