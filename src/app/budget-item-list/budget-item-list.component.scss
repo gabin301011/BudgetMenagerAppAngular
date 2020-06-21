@@ -19,7 +19,6 @@
             flex-direction: column;
             flex-basis: 0; // for the columns to be the same size, regardless of content
             flex-grow: 1;
-            height: 100%;
             
 
             h1 {
@@ -34,14 +33,11 @@
                 flex-direction: column;
 
                 margin-top: 20px;
-                width: 350px;
-                height: 100%;
             }
         }
 
         .income-column {
             margin-right: 35px;
-            width: 350px;
 
             h1 {
                 color: $green;
